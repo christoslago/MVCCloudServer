@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MVCServer.Models.Mail>
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Recipient</th>
+            <th>Address</th>
+            <th>Contact</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Client
+                </td>
+                <td>
+                    @item.Address
+                </td>
+                <td>
+                    @item.Contact
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
